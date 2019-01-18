@@ -81,11 +81,18 @@ h1, h2, li {
 	background-color: white;
 }
 
+img.games {
+    margin-left: 5em;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
 img {
 	margin-top: 1em;
 	margin-left: 5em;
-	width: 350px;
-	height: 350px;
+	width: 300px;
+	height: 300px;
 	border-radius: 50%;
 }
 
@@ -94,7 +101,7 @@ img {
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 	border-top: 10px solid #4aaaa5;
@@ -103,6 +110,12 @@ footer {
 	height: 60px;
 	text-align: center;
 	color: white;
+}
+
+.copyright{
+    font-family: 'Thasadith', sans-serif;
+    font-size: 14;
+    color: white;
 }
 
 .row-1 {
@@ -131,6 +144,75 @@ footer {
     background-color: white;
     }
 
+.h1 {
+    background-color: white;
+    }
+
+.row-4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
+    width: 960px;
+    height: 100px;
+    margin: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px;
+    background-color: white;
+    }
+
+.row-5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
+    width: 960px;
+    height: 350px;
+    margin: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px;
+    background-color: white;
+    }
+
+.row-6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
+    width: 960px;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px;
+    background-color: white;
+    }
+
+.row-7 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
+    width: 960px;
+    height: 100px;
+    margin: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10px 10px;
+    background-color: white;
+    }
+
+.row-8 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
+    width: 960px;
+    height: 400;
+    margin: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    background-color: white;
+    }
+
 .a {
         margin-top: 3em;
         grid-column: 1 / 2;
@@ -156,3 +238,61 @@ footer {
         grid-column: 1 / 2;
         grid-row: 2;
     }
+.e {
+        margin-top: 3em;
+        margin-right: 2em;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+.game-name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20;
+    font-weight: bold;
+    text-align: left;
+    background-color: #4aaaa5;
+}
+
+.contact {
+    width: 540px;
+}
+
+.contact label {
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    border: 1px solid #cccccc;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    font-size: .9em;
+}
+
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
+    color: #cccccc;
+}
+
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+    color: #cccccc;
+}
+
+.contact input::-ms-placeholder, .contact textarea::-ms-placeholder {
+    color: #cccccc;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #cccccc;
+}
+
+}
+
+.contact input[type="submit"] {
+    width: auto;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1em;
+}
