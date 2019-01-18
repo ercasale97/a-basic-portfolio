@@ -21,8 +21,8 @@ header .container {
     margin: 0 auto;
 }
 
-h1, h2 {
-	font-family: 'Cormorant', serif;
+h1, h2, li {
+	font-family: 'Thasadith', sans-serif;
     font-weight: black;
     color: #4aaaa5;
 }
@@ -36,7 +36,7 @@ h1, h2 {
 
 .nametag {
     display: inline-block;
-    font-family: 'Cormorant', serif;
+    font-family: 'Thasadith', sans-serif;
     font-weight: bold;
     font-size: 2em;
     letter-spacing: 0.04em;
@@ -48,7 +48,7 @@ h1, h2 {
 
 
 .nav {
-    width: 49%;
+    width: 45%;
     text-align: right;
     color: #666666;
     font-weight: normal;
@@ -82,10 +82,10 @@ h1, h2 {
 }
 
 img {
-	margin-top: 2em;
+	margin-top: 1em;
 	margin-left: 5em;
-	width: 260px;
-	height: 260px;
+	width: 350px;
+	height: 350px;
 	border-radius: 50%;
 }
 
@@ -106,7 +106,8 @@ footer {
 }
 
 .row-1 {
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
 	width: 960px;
 	height: auto;
 	margin: auto;
@@ -114,12 +115,12 @@ footer {
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 180px 180px;
-    grid-auto-flow: dense;
-    grid-auto-rows: 100px;
     background-color: white;
     }
 
 .row-2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14;
 	width: 960px;
 	height: auto;
 	margin: auto;
@@ -127,8 +128,6 @@ footer {
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 120px 120px;
-    grid-auto-flow: dense;
-    grid-auto-rows: 100px;
     background-color: white;
     }
 
@@ -139,18 +138,20 @@ footer {
     }
 
 .b {
- 	    margin-top: 2em;
+        margin-top: 2em;
  	    margin-right: 2em;
         grid-column: 2;
         grid-row: 1 / 2;
 
 .c {
- 	    margin-left: 2em;
+ 	    margin-top: 3em;
+        margin-left: 2em;
         grid-column: 1 / 2;
         grid-row: 1;
     }
 
 .d {
+        margin-top: 3em;
         margin-right: 2em;
         grid-column: 1 / 2;
         grid-row: 2;
