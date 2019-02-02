@@ -270,21 +270,7 @@ footer {
     font-size: .9em;
 }
 
-.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
-    color: #cccccc;
-}
 
-.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
-    color: #cccccc;
-}
-
-.contact input::-ms-placeholder, .contact textarea::-ms-placeholder {
-    color: #cccccc;
-}
-
-.contact input::placeholder, .contact textarea::placeholder {
-    color: #cccccc;
-}
 
 }
 
