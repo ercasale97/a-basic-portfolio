@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LIST!N</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!--Link bootstrap-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <!--Link CSS-->
+  <link rel="stylesheet" media="screen" href="../css/main.css" />
+  <!-- fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="icon" href ="../img/logo_black.png">
+</head>
+
+
+<body>
+
+  <!-- navbar -->
+  <div class="background">
+  <div class="topnav">
+    <input type="text" placeholder="Email" id="email">
+    <input type="text" placeholder="Password" id="password">
+    <button type="submit" class="loginButton" id="sign-in-button">Login</button>
+  </div>
+
+  
+<div class="wrapper">
+    <div class="container">
+        <img class="logoLandingPage" src="../img/logo.png">
+
+
+        <h1 class="formFontBold">Experience it live.</h1>
+        <p class="formFont">Create an account today.</p>
+      
+        <input id = "new-name" type="text" placeholder="Enter Full Name" name="name" required>
+        <br>
+                  
+        <input id = "new-email" type="text" placeholder="Enter Email" name="email" required>
+        <br>         
+        
+        <input id='new-password' type="password" placeholder="Enter Password" name="psw" required>
+        <br>
+        <button id="sign-up-button" type="submit" class="create-btn" name="create">Sign Up</button>
+        <br>
+        <p class="formFont" id='error'></p>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    $("#sign-in-button").on("click", function() {
+        const body = {
+            username: $("#username-input").val(),
+            password: $("#password-input").val(),
+        }
+    $.ajax({
+            url: "/token",
+            data: body,
+            method: "post"
+        })
+        .then(function(response) {
+            console.warn("Got Data:",response);
+        });
+    });
+
+
+   $("#create-btn").on("click", function() {
+        console.log("what we typed", $("#create").val())
+        $.ajax({
+            url:"/api/user/new",
+            method: "post",
+            data: {name: $("#create").val()}
+        }).then(function(data) {
+            console.log("data we got back", data)
+            window.location.reload()
+        });
+      })
+  </script>
+  
+  <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/loginSignUpLogOut.js"></script>
+
+  <!--Add authorization token to all requests-->
+<script src='../js/auth.js'></script>
+
+  </body>
+</html>

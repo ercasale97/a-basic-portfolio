@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LIST!N</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!--Link bootstrap-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <!--Link CSS-->
+  <link rel="stylesheet" media="screen" href="../css/main.css" />
+  <!-- fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="icon" href ="../img/logo_black.png">
+</head>
+
+
+
+
+<body>
+
+<!--navigation-->
+<div class="row">
+<div class="col-xs-12">
+<div class="topcontent">
+    <a href="../html/newsfeed.html" target="_self">
+        <img class ="logo" src="../img/logo_black.png"></a>
+    <a href="../html/profile.html" target="_self">
+        <img class ="profile" src="../img/profile.png"></a>
+    <button id="logout" class ="logout">logout</button>
+</div>
+</div>
+</div>
+  <!--end navigation-->
+
+  
+
+  <!--Begin Profile Div-->
+  <div class="row"></div>
+  <div class="col-xs-12">
+    <img class="altprofile" src="../img/altprofile.png">
+
+    <!--Trigger AJAX call to populate user information-->
+    <form id="eventContainer">
+      <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+    </form>
+  
+
+
+
+  <!--AJAX response should show up here-->
+  <div class= "populateProfile" id="showresults">
+    <p id="name"></p>
+    <p id="email"></p>
+  </div>
+  </div>
+  </div>
+
+  
+  <button class="add" id="add-event"><img src="../img/add.png" width=50px height=50px></button>
+  <div class = "populateProfile">
+  <div id='my-events'>
+    <p class="populateMessage">You haven't added any events yet!<br>Create a new event or add one from the Home page!</p>
+</div>
+</div>
+
+
+<!--Testing events feed-->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="populateProfile">
+        <div id ="userAddEvent">
+            <div class="title" id="event-title"></div>
+            <div class="date" id="event-date"></div>
+            <div class="location" id="event-location"></div>
+            <div class="artist" id="event-artist"></div>
+        </div>
+    </div>
+
+    
+<!--End testing events feed-->
+
+<style>
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  /* Modal (background) */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid white;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Update Avatar CSS */
+  #imageUpload {
+    display: none;
+  }
+
+  #profileImage {
+    cursor: pointer;
+  }
+
+  #profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  #profile-container img {
+    width: 150px;
+    height: 150px;
+  }
+</style>
+
+  <!-- The Modal -->
+  <div id="eventModal" class="modal">
+
+    <!-- inside Modal -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add your event!</h2>
+     
+      <div class="modal-body">
+
+        <form role="form" id="insertForm">
+          <div class="form-group">
+            <label for="title">Event Name</label>
+            <input type="title" class="form-control" id="title" placeholder="Event Title" />
+          </div>
+
+          <div class="form-group">
+            <label for="date">Event Date</label>
+            <input type="date" class="form-control" id="date" placeholder="Event Date" />
+          </div>
+
+          <div class="form-group">
+            <label for="location">Event Location</label>
+            <input type="location" class="form-control" id="location" placeholder="Event Location" />
+          </div>
+
+          <div class="form-group">
+            <label for="artist">Event Artist</label>
+            <input type="artist" class="form-control" id="artist" placeholder="Event Artist" />
+          </div>
+          <button id='formSubmit' class="btn btn-default">Add!</button>
+        </form>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><p>footer</p></div>
+
+  <script>
+    var modal = document.getElementById('eventModal');
+    // Get the button that opens the modal
+    var btn = document.getElementById("add-event");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
+
+  <!--Add authorization token to all requests-->
+  <script src='/js/auth.js'></script>
+
+  <!-- post and create new event -->
+  <script src='/js/newEvent.js'></script>
+
+  <!-- get profile info -->
+  <script src='/js/getProfile.js'></script>
+
+  <!-- logout button  -->
+  <script src='/js/loginSignUpLogOut.js'></script>
+
+
+
+
+</body>
+
+</html>

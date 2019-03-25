@@ -1,6 +1,5 @@
 body { 
   margin: auto;
-  background-image: url('../images/folk-pattern.png');
   }
 
 #body {
@@ -81,11 +80,15 @@ h1, h2, li {
 	background-color: white;
 }
 
-img.games {
+.games {
     margin-left: 5em;
     width: 250px;
     height: 250px;
     border-radius: 50%;
+}
+
+.lights {
+    width:;
 }
 
 img {

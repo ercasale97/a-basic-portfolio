@@ -1,0 +1,218 @@
+/*============================Navigation======================================*/
+
+.logo {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: auto;
+  width: 20%;
+  z-index: 1;
+  height: auto;
+}
+
+.logoLandingPage {
+  display: block;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: 60%;
+  z-index: 3;
+  height: auto;
+}
+
+@media screen and (max-width: 100px) {
+  .topnav {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+}
+
+.wrapper {
+    margin-top: 12px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.wrapper > div {
+    box-sizing: border-box;
+    float: left;
+    margin: 0 16px;
+    height: 700px;
+}
+
+.loginButton {
+  border-radius: 30px;
+  background-color: white;
+  padding: 16px 20px;
+  margin: 10px ;
+  cursor: pointer;
+  width: 100px;
+}
+
+.logout {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  float: right;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  margin-right: 30px;
+  margin-left: auto;
+  z-index: 1;
+  height: auto;
+}
+
+/*============================End Navigation======================================*/
+
+.profile {
+  position: relative;
+  float: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 30px;
+  margin-left: auto;
+  width: 7%;
+  z-index: 1;
+  height: auto;
+}
+
+.altprofile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+/*Styling specific to the profile page*/
+
+.populateProfile {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px:
+}
+
+.populateMessage {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-size: 18px;
+}
+
+/* Stuff from landing page CSS*/
+
+.formFont {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+.formFontBold {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.background {
+      background-image: url('../img/concert.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      
+    }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 300px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  border-radius: 30px;
+  border: 1px solidwhite;
+    
+    }
+            
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: none;
+    outline: white;
+    }
+   
+    /* Set a style for the submit button */
+    .create-btn {
+        border-radius: 30px;
+        background-color: #ddd;
+        padding: 16px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 300px;
+    }
+    
+    .registerbtn:hover {
+        opacity: 1;
+    }
+    
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      color: white;
+        background-color: white;
+        text-align: center;
+    }
+
+    .add {
+      border-color: white;
+      display: block;
+      margin-right: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+
+    .title {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: black;
+      font-weight: bold;
+      font-size: 50px;
+    }
+
+    .date {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: black;
+      font-size: 50px;
+    }
+
+    .location {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: black;
+      font-size: 50px;
+    }
+
+    .artist {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: black;
+        font-size: 50px;
+    }
+
+
+
+    /*=============Footer==============*/
+
+    .footer {
+      margin-top: 100px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+    }
